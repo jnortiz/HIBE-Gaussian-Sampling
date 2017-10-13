@@ -128,8 +128,8 @@ int Samplers::KnuthYao(int tailcut, RR sigma, RR c) {
     /* Note: the "col" value is in [0, bound]. So, the invalid sample must be 
      * greater than bound. */
     S %= invalidSample;
+    S = S - bound + center;
     S *= signal;
-    S = S+center;
     
     return S;
     
